@@ -1,8 +1,8 @@
 TestSite::Application.routes.draw do
   
-  root :to => 'greetings#widget'
-  match '/no_widget' => 'greetings#no_widget'
-  match '/widget' => 'greetings#widget'
+  root :to => 'greetings#welcome'
+  match '/no_widget' => 'greetings#no_widget', as: 'no_widget'
+  match '/widget' => 'greetings#widget', as: 'widget'
   match '/hello' => 'greetings#widget'
   
   # The priority is based upon order of creation:
